@@ -31,22 +31,26 @@ class ViewController: UIViewController {
         setupSliderGreen()
         setupSliderBlue()
         setupLabel()
+    
     }
     
     @IBAction func redSliderAction() {
-        brightnessRed.text = sliderRed.value.rounded().formatted()
+       let ae = abc(a: sliderRed.value)
+        brightnessRed.text = ae.formatted()
         mainView.backgroundColor = .red
         mainView.backgroundColor = mainView.backgroundColor?.withAlphaComponent(CGFloat(sliderRed.value))
     }
     
     @IBAction func greenSliderAction() {
-        brightnessGreen.text = sliderGreen.value.rounded().formatted()
+        let ae = abc(a: sliderGreen.value)
+         brightnessGreen.text = ae.formatted()
         mainView.backgroundColor = .green
        mainView.backgroundColor = mainView.backgroundColor?.withAlphaComponent(CGFloat(sliderGreen.value))
     }
     
     @IBAction func blueSliderAction() {
-        brightnessBlue.text = sliderBlue.value.rounded().formatted()
+        let ae = abc(a: sliderBlue.value)
+         brightnessBlue.text = ae.formatted()
         mainView.backgroundColor = .blue
        mainView.backgroundColor = mainView.backgroundColor?.withAlphaComponent(CGFloat(sliderBlue.value))
     }
@@ -94,10 +98,10 @@ mainLabel.textAlignment = .center // textAlignment - размещение тек
 mainLabel.numberOfLines = 2 // количество строк в лейбле
 */
 
-/* extension ViewController {
- func abc (a: Float) -> String {
- let _ = Float(round(1000 * a) / 1000)
+extension ViewController {
+ func abc (a: Float) -> Float{
+ let value1 = Float(round(100 * a) / 100)
+     return value1
  }
- return
  }
- */
+
