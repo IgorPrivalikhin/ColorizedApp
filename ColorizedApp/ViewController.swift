@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         valueGreenLabel.text = rounding(number: sliderGreen.value)
         valueBlueLabel.text = rounding(number: sliderBlue.value)
     }
-    
+     
 // MARK: - Function
     
     func setupLabel() {
