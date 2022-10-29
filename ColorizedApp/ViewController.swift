@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+// MARK: - IB Outlets
+    
     @IBOutlet var mainView: UIView!
     
     @IBOutlet var labelRed: UILabel!
@@ -25,29 +27,25 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         mainView.layer.cornerRadius = 15
         sliderRed.minimumTrackTintColor = .red
         sliderGreen.minimumTrackTintColor = .green
         sliderBlue.minimumTrackTintColor = .blue
-        super.viewDidLoad()
+        
         setupLabel()
     }
     
+// MARK: - IB Action
     
     @IBAction func redSliderAction() {
         changeColor()
-        valueRedLabel.text = rounding(a: sliderRed.value)
+        valueRedLabel.text = rounding(number: sliderRed.value)
+        valueGreenLabel.text = rounding(number: sliderGreen.value)
+        valueBlueLabel.text = rounding(number: sliderBlue.value)
     }
     
-    @IBAction func greenSliderAction() {
-        changeColor()
-        valueGreenLabel.text = rounding(a: sliderGreen.value)
-    }
-    
-    @IBAction func blueSliderAction() {
-        changeColor()
-        valueBlueLabel.text = rounding(a: sliderBlue.value)
-    }
+// MARK: - Function
     
     func setupLabel() {
         valueRedLabel.text = sliderRed.value.formatted()
@@ -55,51 +53,17 @@ class ViewController: UIViewController {
         valueBlueLabel.text = sliderBlue.value.formatted()
     }
     
-    func changeColor() {
+    private func changeColor() {
         mainView.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: 1)
     }
     
 }
 
-
-
+// MARK: - Extension
 
 extension ViewController {
-    func rounding(a: Float) -> String{
-        let roundingValue = Float(round(100 * a) / 100).formatted()
+    func rounding(number: Float) -> String{
+        let roundingValue = Float(round(100 * number) / 100).formatted()
         return roundingValue
     }
 }
-
-
-/*
- Рабочий вариант:
- @IBAction func redSliderAction() {
-     changeColor()
-    let ae = abc(a: sliderRed.value)
-    brightnessRed.text = ae.formatted()
- }
- 
- @IBAction func greenSliderAction() {
-     changeColor()
-     let ae = abc(a: sliderGreen.value)
-     brightnessGreen.text = ae.formatted()
- }
- 
- @IBAction func blueSliderAction() {
-     changeColor()
-     let ae = abc(a: sliderBlue.value)
-    brightnessBlue.text = ae.formatted()
- }
- 
- func setupLabel() {
-     brightnessRed.text = sliderRed.value.formatted()
-     brightnessGreen.text = sliderGreen.value.formatted()
-     brightnessBlue.text = sliderBlue.value.formatted()
- }
- 
- func changeColor() {
-     mainView.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: 1)
- }
- 
- */
