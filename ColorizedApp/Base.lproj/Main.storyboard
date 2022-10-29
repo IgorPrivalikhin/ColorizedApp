@@ -118,7 +118,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TCR-Xh-EM5" secondAttribute="trailing" constant="16" id="4zn-PS-6OQ"/>
                             <constraint firstItem="TCR-Xh-EM5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="6Qd-lw-F7r"/>
@@ -129,9 +129,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="brightnessBlue" destination="Y7C-j1-Gvt" id="n2r-AL-hdc"/>
-                        <outlet property="brightnessGreen" destination="f62-GA-RgG" id="AiP-st-lWb"/>
-                        <outlet property="brightnessRed" destination="GAd-9b-WUv" id="JoR-J8-78f"/>
                         <outlet property="labelBlue" destination="bdN-SA-sQ5" id="Ont-bX-uwy"/>
                         <outlet property="labelGreen" destination="Wkq-En-PHd" id="2LA-NH-kM5"/>
                         <outlet property="labelRed" destination="wCN-6k-bbK" id="vGW-uX-Hvo"/>
@@ -139,6 +136,9 @@
                         <outlet property="sliderBlue" destination="eaA-Z8-Xkn" id="UNT-D3-hh6"/>
                         <outlet property="sliderGreen" destination="alY-hI-6Vq" id="p9R-zK-ANt"/>
                         <outlet property="sliderRed" destination="45v-9S-vjq" id="eS7-GM-Vqt"/>
+                        <outlet property="valueBlueLabel" destination="Y7C-j1-Gvt" id="n2r-AL-hdc"/>
+                        <outlet property="valueGreenLabel" destination="f62-GA-RgG" id="AiP-st-lWb"/>
+                        <outlet property="valueRedLabel" destination="GAd-9b-WUv" id="JoR-J8-78f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -147,11 +147,11 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

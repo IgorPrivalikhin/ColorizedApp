@@ -15,9 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet var labelGreen: UILabel!
     @IBOutlet var labelBlue: UILabel!
     
-    @IBOutlet var brightnessRed: UILabel!
-    @IBOutlet var brightnessGreen: UILabel!
-    @IBOutlet var brightnessBlue: UILabel!
+    @IBOutlet var valueRedLabel: UILabel!
+    @IBOutlet var valueGreenLabel: UILabel!
+    @IBOutlet var valueBlueLabel: UILabel!
     
     @IBOutlet var sliderRed: UISlider!
     @IBOutlet var sliderGreen: UISlider!
@@ -26,82 +26,80 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         mainView.layer.cornerRadius = 15
+        sliderRed.minimumTrackTintColor = .red
+        sliderGreen.minimumTrackTintColor = .green
+        sliderBlue.minimumTrackTintColor = .blue
         super.viewDidLoad()
-        setupSliderRed()
-        setupSliderGreen()
-        setupSliderBlue()
         setupLabel()
-    
     }
     
+    
     @IBAction func redSliderAction() {
-       let ae = abc(a: sliderRed.value)
-        brightnessRed.text = ae.formatted()
-        mainView.backgroundColor = .red
-        mainView.backgroundColor = mainView.backgroundColor?.withAlphaComponent(CGFloat(sliderRed.value))
+        changeColor()
+        valueRedLabel.text = rounding(a: sliderRed.value)
     }
     
     @IBAction func greenSliderAction() {
-        let ae = abc(a: sliderGreen.value)
-         brightnessGreen.text = ae.formatted()
-        mainView.backgroundColor = .green
-       mainView.backgroundColor = mainView.backgroundColor?.withAlphaComponent(CGFloat(sliderGreen.value))
+        changeColor()
+        valueGreenLabel.text = rounding(a: sliderGreen.value)
     }
     
     @IBAction func blueSliderAction() {
-        let ae = abc(a: sliderBlue.value)
-         brightnessBlue.text = ae.formatted()
-        mainView.backgroundColor = .blue
-       mainView.backgroundColor = mainView.backgroundColor?.withAlphaComponent(CGFloat(sliderBlue.value))
+        changeColor()
+        valueBlueLabel.text = rounding(a: sliderBlue.value)
     }
-
+    
     func setupLabel() {
-        brightnessRed.text = sliderRed.value.formatted()
-        brightnessGreen.text = sliderGreen.value.formatted()
-        brightnessBlue.text = sliderBlue.value.formatted()
-   }
-    
-    
-    private func setupSliderRed() {
-        sliderRed.value = 0.2
-        sliderRed.minimumValue = 0
-        sliderRed.maximumValue = 1
-        sliderRed.minimumTrackTintColor = .red
+        valueRedLabel.text = sliderRed.value.formatted()
+        valueGreenLabel.text = sliderGreen.value.formatted()
+        valueBlueLabel.text = sliderBlue.value.formatted()
     }
-    private func setupSliderGreen() {
-        sliderGreen.value = 0.4
-        sliderGreen.minimumValue = 0
-        sliderGreen.maximumValue = 1
-        sliderGreen.minimumTrackTintColor = .green
-    }
-    private func setupSliderBlue() {
-        sliderBlue.value = 0.6
-        sliderBlue.minimumValue = 0
-        sliderBlue.maximumValue = 1
-        sliderBlue.minimumTrackTintColor = .blue
+    
+    func changeColor() {
+        mainView.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: 1)
     }
     
 }
 
-/*  slider.value = 1 // значение слайдера
-  slider.minimumValue = 0 // мин значение
-  slider.maximumValue = 1 // макс значение
-  slider.minimumTrackTintColor = .yellow // цвет шкалы минимум
-  slider.maximumTrackTintColor = .red
-  slider.thumbTintColor = .blue // цвет бегунка
- */
 
-/*
-mainLabel.text = slider.value.formatted() // ""- по умолчанию делали пустой, после создания настройки слайдера в него поместили значение слайдера и методом formatted преобразовали в string
-mainLabel.font = UIFont.systemFont(ofSize: 35) // systemFont - метод для системного шрифта
-mainLabel.textAlignment = .center // textAlignment - размещение текста внутри лейбла (по центру)
-mainLabel.numberOfLines = 2 // количество строк в лейбле
-*/
+
 
 extension ViewController {
- func abc (a: Float) -> Float{
- let value1 = Float(round(100 * a) / 100)
-     return value1
- }
- }
+    func rounding(a: Float) -> String{
+        let roundingValue = Float(round(100 * a) / 100).formatted()
+        return roundingValue
+    }
+}
 
+
+/*
+ Рабочий вариант:
+ @IBAction func redSliderAction() {
+     changeColor()
+    let ae = abc(a: sliderRed.value)
+    brightnessRed.text = ae.formatted()
+ }
+ 
+ @IBAction func greenSliderAction() {
+     changeColor()
+     let ae = abc(a: sliderGreen.value)
+     brightnessGreen.text = ae.formatted()
+ }
+ 
+ @IBAction func blueSliderAction() {
+     changeColor()
+     let ae = abc(a: sliderBlue.value)
+    brightnessBlue.text = ae.formatted()
+ }
+ 
+ func setupLabel() {
+     brightnessRed.text = sliderRed.value.formatted()
+     brightnessGreen.text = sliderGreen.value.formatted()
+     brightnessBlue.text = sliderBlue.value.formatted()
+ }
+ 
+ func changeColor() {
+     mainView.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: 1)
+ }
+ 
+ */
