@@ -98,21 +98,21 @@
                                                 <rect key="frame" x="-2" y="0.0" width="249.5" height="31"/>
                                                 <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
-                                                    <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="RNW-ak-jKl"/>
+                                                    <action selector="SliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="RNW-ak-jKl"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="alY-hI-6Vq">
                                                 <rect key="frame" x="-2" y="39" width="249.5" height="31"/>
                                                 <color key="thumbTintColor" systemColor="labelColor"/>
                                                 <connections>
-                                                    <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="psB-ge-ZVV"/>
+                                                    <action selector="SliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="psB-ge-ZVV"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eaA-Z8-Xkn">
                                                 <rect key="frame" x="-2" y="78" width="249.5" height="31"/>
                                                 <color key="thumbTintColor" systemColor="labelColor"/>
                                                 <connections>
-                                                    <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="yp9-i3-2MB"/>
+                                                    <action selector="SliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="yp9-i3-2MB"/>
                                                 </connections>
                                             </slider>
                                         </subviews>

@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     
 // MARK: - IB Action
     
-    @IBAction func redSliderAction() {
+    @IBAction func SliderAction() {
         changeColor()
         valueRedLabel.text = rounding(number: sliderRed.value)
         valueGreenLabel.text = rounding(number: sliderGreen.value)
