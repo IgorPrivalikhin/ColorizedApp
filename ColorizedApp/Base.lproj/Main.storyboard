@@ -62,7 +62,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Emu-gp-pqw">
                                         <rect key="frame" x="73" y="0.0" width="41.5" height="108"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GAd-9b-WUv">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="0,5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GAd-9b-WUv">
                                                 <rect key="frame" x="0.0" y="0.0" width="41.5" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="41.329999999999998" id="2co-Iv-uo7"/>
@@ -71,7 +71,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f62-GA-RgG">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f62-GA-RgG">
                                                 <rect key="frame" x="0.0" y="48" width="41.5" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="41.329999999999998" id="aF5-4H-8rv"/>
@@ -80,7 +80,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y7C-j1-Gvt">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y7C-j1-Gvt">
                                                 <rect key="frame" x="0.0" y="87.5" width="41.5" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="41.329999999999998" id="57Q-GA-iVi"/>
@@ -98,21 +98,21 @@
                                                 <rect key="frame" x="-2" y="0.0" width="249.5" height="31"/>
                                                 <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
-                                                    <action selector="SliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="RNW-ak-jKl"/>
+                                                    <action selector="SliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="kfB-vA-0Mk"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="alY-hI-6Vq">
                                                 <rect key="frame" x="-2" y="39" width="249.5" height="31"/>
                                                 <color key="thumbTintColor" systemColor="labelColor"/>
                                                 <connections>
-                                                    <action selector="SliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="psB-ge-ZVV"/>
+                                                    <action selector="SliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="xn6-l4-r9x"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eaA-Z8-Xkn">
                                                 <rect key="frame" x="-2" y="78" width="249.5" height="31"/>
                                                 <color key="thumbTintColor" systemColor="labelColor"/>
                                                 <connections>
-                                                    <action selector="SliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="yp9-i3-2MB"/>
+                                                    <action selector="SliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="3uE-YF-DMW"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -132,9 +132,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="labelBlue" destination="bdN-SA-sQ5" id="Ont-bX-uwy"/>
-                        <outlet property="labelGreen" destination="Wkq-En-PHd" id="2LA-NH-kM5"/>
-                        <outlet property="labelRed" destination="wCN-6k-bbK" id="vGW-uX-Hvo"/>
                         <outlet property="mainView" destination="TCR-Xh-EM5" id="vEc-Ty-OEg"/>
                         <outlet property="sliderBlue" destination="eaA-Z8-Xkn" id="UNT-D3-hh6"/>
                         <outlet property="sliderGreen" destination="alY-hI-6Vq" id="p9R-zK-ANt"/>
@@ -146,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="99.069767441860463" y="1.9313304721030045"/>
+            <point key="canvasLocation" x="98.550724637681171" y="1.3392857142857142"/>
         </scene>
     </scenes>
     <resources>

@@ -13,10 +13,6 @@ class ViewController: UIViewController {
     
     @IBOutlet var mainView: UIView!
     
-    @IBOutlet var labelRed: UILabel!
-    @IBOutlet var labelGreen: UILabel!
-    @IBOutlet var labelBlue: UILabel!
-    
     @IBOutlet var valueRedLabel: UILabel!
     @IBOutlet var valueGreenLabel: UILabel!
     @IBOutlet var valueBlueLabel: UILabel!
@@ -32,38 +28,23 @@ class ViewController: UIViewController {
         sliderRed.minimumTrackTintColor = .red
         sliderGreen.minimumTrackTintColor = .green
         sliderBlue.minimumTrackTintColor = .blue
-        
-        setupLabel()
     }
     
 // MARK: - IB Action
     
     @IBAction func SliderAction() {
+        setupLabel()
         changeColor()
-        valueRedLabel.text = rounding(number: sliderRed.value)
-        valueGreenLabel.text = rounding(number: sliderGreen.value)
-        valueBlueLabel.text = rounding(number: sliderBlue.value)
     }
      
 // MARK: - Function
     
     func setupLabel() {
-        valueRedLabel.text = sliderRed.value.formatted()
-        valueGreenLabel.text = sliderGreen.value.formatted()
-        valueBlueLabel.text = sliderBlue.value.formatted()
+        valueRedLabel.text = String(format: "%.2f", sliderRed.value)
+        valueGreenLabel.text = String(format: "%.2f", sliderGreen.value)
+        valueBlueLabel.text = String(format: "%.2f", sliderBlue.value)
     }
-    
     private func changeColor() {
         mainView.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: 1)
-    }
-    
-}
-
-// MARK: - Extension
-
-extension ViewController {
-    func rounding(number: Float) -> String{
-        let roundingValue = Float(round(100 * number) / 100).formatted()
-        return roundingValue
     }
 }
